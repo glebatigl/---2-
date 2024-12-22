@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding-top: 60px;
+        }
+
+        section h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.7);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        #collections, #contacts, #about {
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .fashion-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .fashion-gallery div {
+            text-align: center;
+        }
+
+        .fashion-gallery img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            border: 2px solid #000;
+            transition: transform 0.3s;
+        }
+
+        .fashion-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .form-container label {
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            padding: 10px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container button:hover {
+            background-color: #e63900;
+        }
+
+        footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#collections">Коллекции</a>
+            <a href="#news">Новости</a>
+            <a href="#contacts">Контакты</a>
+            <a href="#about">О нас</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="background" style="background-image: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f');"></div>
+        <h1>Мир моды</h1>
+        <p>Откройте для себя вдохновение и новые тенденции в мире моды!</p>
+    </section>
+
+    <section id="collections">
+        <div class="background" style="background-image: url('https://images.unsplash.com/photo-1517841905240-472988babdf9');"></div>
+        <h1>Коллекции</h1>
+        <p>Исследуйте последние коллекции и находите стиль, который подходит именно вам.</p>
+        <div class="fashion-gallery">
+            <div>
+                <h3>Весна 2024</h3>
+                <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc6e1d" alt="Spring Collection">
+            </div>
+            <div>
+                <h3>Лето 2024</h3>
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="Summer Collection">
+            </div>
+            <div>
+                <h3>Осень 2024</h3>
+                <img src="https://images.unsplash.com/photo-1520979147561-68016bb9c4c9" alt="Autumn Collection">
+            </div>
+        </div>
+    </section>
+
+    <section id="news">
+        <div class="background" style="background-image: url('https://images.unsplash.com/photo-1502139214982-d03a3c7da1c3');"></div>
+        <h1>Новости</h1>
+        <p>Откройте последние тренды и анонсы в мире моды.</p>
+        <a href="#" class="btn">Узнать больше</a>
+    </section>
+
+    <section id="contacts">
+        <h1>Контакты</h1>
+        <form class="form-container" onsubmit="event.preventDefault(); alert('Спасибо за ваше сообщение!');">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Ваш email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <section id="about">
+        <h1>О нас</h1>
+        <p>Мы — платформа для любителей моды, которая вдохновляет, обучает и помогает находить свой уникальный стиль.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fashion World. Все права защищены.</p>
+    </footer>
+</body>
+</html>
